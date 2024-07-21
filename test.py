@@ -1,5 +1,6 @@
 import pandas as pd
-
+from datasets import load_dataset
 # load the training dataset
-data = pd.read_csv('data/wine.csv')
-data.sample(10)
+data = load_dataset('squad')
+df = pd.DataFrame(data['train'])
+print(df)
